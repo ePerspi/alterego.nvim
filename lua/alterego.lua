@@ -1,5 +1,4 @@
 M = {}
-
 M.alteregos = {}
 
 function M.add_alteregos(word_pair)
@@ -7,12 +6,12 @@ function M.add_alteregos(word_pair)
     M.alteregos[word_pair[2]] = word_pair[1]
 end
 
-function M.get_current_word()
+function M._get_current_word()
     return vim.call("expand", "<cword>")
 end
 
 function M.flip_word()
-    local current_word = M.get_current_word()
+    local current_word = M._get_current_word()
     local alterego = M.alteregos[current_word]
 
     if alterego then
