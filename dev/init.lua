@@ -4,5 +4,4 @@ package.loaded["alterego"] = nil
 
 vim.api.nvim_set_keymap("n", ",r", "<cmd>luafile dev/init.lua<cr>", {})
 
-Alterego = require("alterego")
-vim.api.nvim_set_keymap("n", "<leader>0", "<cmd>lua Alterego.flip_word()<cr>", {})
+vim.api.nvim_set_keymap("n", "<leader>0", "<cmd>FlipWord", {})
