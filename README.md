@@ -43,7 +43,7 @@ require("alterego").setup({
 ```
 
 ### Default Alteregos
-|Word1|Word2|
+|||
 |:---:|:---:|
 |true |false|
 |1    |0    |
