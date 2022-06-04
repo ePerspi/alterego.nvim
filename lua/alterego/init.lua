@@ -23,7 +23,6 @@ M.flip_word = function()
 
     if alterego then
         vim.cmd("normal! ciw" .. alterego)
-        vim.fn['repeat#set'](":" .. usercmd .. _t("<CR>"))
     else
         print(
             "No alterego found for the word '" ..
@@ -31,6 +30,7 @@ M.flip_word = function()
             "'. Add words with ':lua require(\"alterego\").add_alteregos({\"alter\", \"ego\"})'."
         )
     end
+    vim.fn['repeat#set'](":" .. usercmd .. _t("<CR>"))
 end
 
 -- SETUP
