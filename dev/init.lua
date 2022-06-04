@@ -4,4 +4,8 @@ package.loaded["alterego"] = nil
 
 vim.api.nvim_set_keymap("n", ",r", "<cmd>luafile dev/init.lua<cr>", {})
 
-vim.api.nvim_set_keymap("n", "<leader>0", "<cmd>FlipWord", {})
+require("alterego").setup({
+    alteregos = {
+        { "bleu", "rouge" }
+    }
+})
