@@ -22,7 +22,7 @@ lua require("alterego").setup()
 ```
 
 ### Setup
-You can provide additional alteregos (word pairs) or overwrite the default ones.
+(Optional) You can provide additional alteregos (word pairs) or overwrite the default ones.
 ```lua
 require("alterego").setup({
     alteregos = {
@@ -37,15 +37,16 @@ require("alterego").setup({
 ```vim
 :FlipWord
 ```
-#### Keymap
+#### (Default) Keymap
 ```vim
 <leader>0
 ```
 
 ### Default Alteregos
-|true|false|
-|1|0|
-|yes|no|
+|:---:|:---:|
+|true |false|
+|1    |0    |
+|yes  |no   |
 
 #### How to add custom alteregos
 Vim command
