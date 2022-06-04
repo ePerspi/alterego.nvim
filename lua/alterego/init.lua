@@ -48,7 +48,10 @@ M.setup = function(opts)
         end
     end
 
+    -- Create user command
     vim.api.nvim_create_user_command(usercmd, M.flip_word, {})
+
+    -- Set default mapping
     vim.api.nvim_set_keymap("n", "<leader>0", "<cmd>FlipWord<cr>", {})
 end
 
