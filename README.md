@@ -1,6 +1,8 @@
 # antonyms.nvim
 Neovim plugin to "flip" the word under the cursor, i.e., replace it with its **antonym**.
 
+For example, replace the word 'true' with 'false'.
+
 ### Installation
 -   With [packer.nvim](https://github.com/wbthomason/packer.nvim)
 ```lua
