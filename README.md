@@ -50,6 +50,8 @@ require("antonyms").setup({
 |||
 |:---:|:---:|
 |true |false|
+|True |False|
+|TRUE |FALSE|
 |1    |0    |
 |yes  |no   |
 
