@@ -1,31 +1,35 @@
-# alterego.nvim
-Neovim plugin to "flip" the word under the cursor, i.e replace it with its opposite a.k.a. its **alterego**.
+# antonyms.nvim
+Neovim plugin to "flip" the word under the cursor, i.e replace it with its opposite a.k.a. its **antonym**.
 
 ### Installation
 -   With [packer.nvim](https://github.com/wbthomason/packer.nvim)
 ```lua
 use {
-    "evanasse/alterego.nvim",
+    "evanasse/antonyms.nvim",
     requires { "tpope/vim-repeat" },
+    config = function()
+        require("antonyms").setup()
+    end
+}
+```
+
+-   With [lazy.nvim](https://github.com/folke/lazy.nvim)
+```lua
+{
+    "evanasse/antonyms.nvim",
+    dependencies = { "tpope/vim-repeat" },
     config = function()
         require("alterego").setup()
     end
 }
-```
--   With [vim-plug](https://github.com/junegunn/vim-plug)
-```lua
-Plug 'tpope/vim-repeat'
-Plug 'evanasse/alterego.nvim'
 
-" Somewhere after plug#end()
-lua require("alterego").setup()
 ```
 
 ### Setup
-(Optional) You can provide additional alteregos (word pairs) or overwrite the default ones.
+(Optional) You can provide additional antonyms (word pairs) or overwrite the default ones.
 ```lua
-require("alterego").setup({
-    alteregos = {
+require("antonyms").setup({
+    antonyms = {
         { "young", "old" },
         { "light", "dark" }
     }
@@ -42,22 +46,22 @@ require("alterego").setup({
 <leader>0
 ```
 
-### Default Alteregos
+### Default Antonyms
 |||
 |:---:|:---:|
 |true |false|
 |1    |0    |
 |yes  |no   |
 
-#### How to add custom alteregos
+#### How to add custom antonyms
 Vim command
 ```vim
-:lua require("alterego").add_alteregos({"word1", "word2"})
+:lua require("antonyms").add_antonyms({"word1", "word2"})
 ```
 Setup
 ```lua
-require("alterego").setup({
-    alteregos = {
+require("antonyms").setup({
+    antonyms = {
         { "word1", "word2" }
     }
 })
