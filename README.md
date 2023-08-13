@@ -1,5 +1,5 @@
 # antonyms.nvim
-Neovim plugin to "flip" the word under the cursor, i.e replace it with its opposite a.k.a. its **antonym**.
+Neovim plugin to "flip" the word under the cursor, i.e., replace it with its **antonym**.
 
 ### Installation
 -   With [packer.nvim](https://github.com/wbthomason/packer.nvim)
